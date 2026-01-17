@@ -1,6 +1,11 @@
 # Netflix-Recommendation-System
 Netflix’s recommendation system is a personalized algorithm that predicts what you’re most likely to enjoy, based on your viewing behavior, preferences, and similarities with other users. 
 
+# Home Page
+Here the user can choose list of their favourite movies and series and their preferred language. For example, I have entered a list with 2 Horror Movies(Insidious and Insidious Chapter 2), an action series(Supergirl) and a drama series(Suits) as my list of choices and English and Hindi as my preferred languages. Clicking on the Get Started button the user will see the list of recommendations.
+
+<img width="1919" height="925" alt="Screenshot-HomePage" src="https://github.com/user-attachments/assets/be733644-88b9-44ea-90a0-32e05464dc2b" />
+
 # Features
 - Data pipeline: Ingestion → cleaning → splitting → feature stores (users/items/interactions).
 - Models: User–item CF (ALS), item-based kNN, content-based (TF‑IDF), hybrid ranker (LightGBM/XGBoost).
@@ -10,50 +15,37 @@ Netflix’s recommendation system is a personalized algorithm that predicts what
 - Scalability: Sparse matrices, incremental retraining, cached embeddings.
 
 # netflix-recommender/
-├─ app/
-│  ├─ api.py              # FastAPI app (recommendations, health)
-│  └─ service.py          # Model loading, request handling
-├─ configs/
-│  ├─ als.yaml            # Collaborative filtering config
-│  ├─ knn.yaml            # Item-based kNN config
-│  └─ hybrid.yaml         # Two-stage ranker config
-├─ data/
-│  ├─ raw/                # Input datasets (ratings, metadata)
-│  └─ processed/          # Cleaned splits + features
-├─ models/
-│  ├─ checkpoints/        # Saved model artifacts
-│  └─ registry.json       # Active model pointer
-├─ notebooks/             # EDA, experiments (optional)
-├─ scripts/
-│  ├─ prepare_data.py     # Clean, split, feature build
-│  ├─ train.py            # Train selected model
-│  ├─ evaluate.py         # Offline metrics
-│  └─ recommend.py        # CLI recommendations
-├─ tests/                 # Unit tests
-├─ requirements.txt
-├─ README.md
-└─ LICENSE
+ app/
+    api.py              # FastAPI app (recommendations, health)
+    service.py          # Model loading, request handling
+ configs/
+     als.yaml            # Collaborative filtering config
+     knn.yaml            # Item-based kNN config
+     hybrid.yaml         # Two-stage ranker config
+ data/
+     raw/                # Input datasets (ratings, metadata)
+     processed/          # Cleaned splits + features
+ models/
+      checkpoints/        # Saved model artifacts
+     registry.json       # Active model pointer
+notebooks/             # EDA, experiments (optional)
+scripts/
+     prepare_data.py     # Clean, split, feature build
+     train.py            # Train selected model
+     evaluate.py         # Offline metrics
+     recommend.py        # CLI recommendations
+ tests/                 # Unit tests
+ requirements.txt
+ README.md
+ LICENSE
+ 
 # Data
 - Ratings: user_id, item_id, rating, timestamp
 - Metadata: item_id, title, genres, description, year
 - Splits: Chronological train/val/test with user-level stratification.
 - Cold-start handling: Content-based fallback for new users/items.
-# Collaborative filtering (ALS)
-- Input: User–item implicit matrix (watch/like).
-- Output: Top‑K recommendations via latent factors.
-- Config: configs/als.yaml
-seed: 42
-model:
-  type: als
-  factors: 64
-  regularization: 0.05
-  iterations: 20
-  alpha: 40            # for implicit feedback
-train:
-  min_interactions: 5
-  eval_k: [5, 10, 20]
 
-  # Item-based kNN
+ # Item-based kNN
 - Cosine similarity over interaction vectors; fast, interpretable.
 - configs/knn.yaml
 
