@@ -39,7 +39,7 @@ To be able to use this web app locally in a development environment you will nee
 
 ```cmd
 # Clone this repository
-git clone https://github.com/garg-priya-creator/Netflix-Recommendation-System.git
+git clone https://github.com/kunalnagarale/Netflix-Recommendation-System.git
 
 # Go into the repository
 cd netflix-recommendation-system
@@ -92,7 +92,7 @@ Inspired by classic CF literature, MovieLens datasets, and practical LTR pattern
 # Author
 
 👤 **Kunal Nagarale**
-- Github: [https://github.com/garg-priya-creator](https://github.com/kunalnagarale)
+- Github: (https://github.com/kunalnagarale)
 - Linkedin: www.linkedin.com/in/kunal-nagarale-b880031b6
 - Email: kunalnagarale92@gmail.com
 
