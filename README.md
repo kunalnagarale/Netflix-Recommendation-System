@@ -3,8 +3,11 @@ Netflix’s recommendation system is a personalized algorithm that predicts what
 
 # This web-app contains 3 main pages:
 -Home Page
+
 -Recommendation Page
+
 -Movie Detail Page
+
 -Netflix Page
 
 # Home Page
