@@ -29,6 +29,35 @@ Here are the complete details of the user selected title like Genre, Movie Summa
 This page is not a part of my web-app but an example what the user will see as the Netflix Page if they choose to click on the Netflix Link for the title. You can login into your Netflix account and enjoy watching your selected movie or series from our recommendations.
 <img width="1829" height="705" alt="Screenshot 2026-01-17 181015" src="https://github.com/user-attachments/assets/6f33f806-4e01-432c-b85c-e48b506041d2" />
 
+# How To Use
+
+To be able to use this web app locally in a development environment you will need the following:
+
+1) You will need [Git](https://git-scm.com) installed on your computer.
+
+2) Then From your terminal, you should do the following:
+
+```cmd
+# Clone this repository
+git clone https://github.com/garg-priya-creator/Netflix-Recommendation-System.git
+
+# Go into the repository
+cd netflix-recommendation-system
+
+# Install flask (if you already haven't)
+pip install flask
+
+```
+3) To run this application you don't need to have any special configuration but make sure you don't change the directory of the project otherwise you can recieve errors while you try to run the app.
+
+4) You can run the Netflix React App using the following command from your terminal:
+
+```
+# Run the app
+>>set FLASK_APP=app.py
+>>flask run
+```
+
 # Features
 - Data pipeline: Ingestion → cleaning → splitting → feature stores (users/items/interactions).
 - Models: User–item CF (ALS), item-based kNN, content-based (TF‑IDF), hybrid ranker (LightGBM/XGBoost).
@@ -60,6 +89,12 @@ This page is not a part of my web-app but an example what the user will see as t
 # Acknowledgments
 Inspired by classic CF literature, MovieLens datasets, and practical LTR patterns used in production recommenders.
 
+# Author
+
+👤 **Kunal Nagarale**
+- Github: [https://github.com/garg-priya-creator](https://github.com/kunalnagarale)
+- Linkedin: www.linkedin.com/in/kunal-nagarale-b880031b6
+- Email: kunalnagarale92@gmail.com
 
 
 
