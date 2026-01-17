@@ -20,13 +20,6 @@ Here the user will get poster images of all the recommended movies and series so
 <img width="1917" height="925" alt="Screenshot-RecommendationPage2" src="https://github.com/user-attachments/assets/6e7ac794-2d9d-472e-997d-eebb467465ec" />
 Clicking on any poster image, the user will be sent to the Movie Details page for the corresponding title.
 
-# Features
-- Data pipeline: Ingestion → cleaning → splitting → feature stores (users/items/interactions).
-- Models: User–item CF (ALS), item-based kNN, content-based (TF‑IDF), hybrid ranker (LightGBM/XGBoost).
-- Evaluation: Offline metrics (Precision@K, Recall@K, MAP, NDCG), A/B-ready logging.
-- Serving: FastAPI endpoint + CLI for batch recommendations.
-- Reproducibility: Deterministic seeds, config-driven runs, experiment tracking.
-- Scalability: Sparse matrices, incremental retraining, cached embeddings.
 
 # Movie Detail Page
 Here are the complete details of the user selected title like Genre, Movie Summary, Languages in which movie is available, IMDb scores, Directors, Writers and Actors and so on. User will also find a link at the end of the page for the NEtflix Page of the corresponding title.
@@ -38,28 +31,13 @@ Here are the complete details of the user selected title like Genre, Movie Summa
 This page is not a part of my web-app but an example what the user will see as the Netflix Page if they choose to click on the Netflix Link for the title. You can login into your Netflix account and enjoy watching your selected movie or series from our recommendations.
 <img width="1829" height="705" alt="Screenshot 2026-01-17 181015" src="https://github.com/user-attachments/assets/6f33f806-4e01-432c-b85c-e48b506041d2" />
 
-How To Use
-To be able to use this web app locally in a development environment you will need the following:
-
-You will need Git installed on your computer.
-
-Then From your terminal, you should do the following:
-
-# Clone this repository
-git clone https://github.com/garg-priya-creator/Netflix-Recommendation-System.git
-
-# Go into the repository
-cd netflix-recommendation-system
-
-# Install flask (if you already haven't)
-pip install flask
-To run this application you don't need to have any special configuration but make sure you don't change the directory of the project otherwise you can recieve errors while you try to run the app.
-
-You can run the Netflix React App using the following command from your terminal:
-
-# Run the app
->>set FLASK_APP=app.py
->>flask run
+# Features
+- Data pipeline: Ingestion → cleaning → splitting → feature stores (users/items/interactions).
+- Models: User–item CF (ALS), item-based kNN, content-based (TF‑IDF), hybrid ranker (LightGBM/XGBoost).
+- Evaluation: Offline metrics (Precision@K, Recall@K, MAP, NDCG), A/B-ready logging.
+- Serving: FastAPI endpoint + CLI for batch recommendations.
+- Reproducibility: Deterministic seeds, config-driven runs, experiment tracking.
+- Scalability: Sparse matrices, incremental retraining, cached embeddings.
 
 # Data
 - Ratings: user_id, item_id, rating, timestamp
