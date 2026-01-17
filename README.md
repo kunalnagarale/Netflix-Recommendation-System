@@ -15,6 +15,11 @@ Here the user can choose list of their favourite movies and series and their pre
 
 <img width="1919" height="925" alt="Screenshot-HomePage" src="https://github.com/user-attachments/assets/be733644-88b9-44ea-90a0-32e05464dc2b" />
 
+# Recommendation Page
+Here the user will get poster images of all the recommended movies and series sorted based upon their IMDb Scores.
+<img width="1917" height="925" alt="Screenshot-RecommendationPage2" src="https://github.com/user-attachments/assets/6e7ac794-2d9d-472e-997d-eebb467465ec" />
+Clicking on any poster image, the user will be sent to the Movie Details page for the corresponding title.
+
 # Features
 - Data pipeline: Ingestion → cleaning → splitting → feature stores (users/items/interactions).
 - Models: User–item CF (ALS), item-based kNN, content-based (TF‑IDF), hybrid ranker (LightGBM/XGBoost).
