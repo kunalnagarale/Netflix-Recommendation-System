@@ -28,31 +28,10 @@ Clicking on any poster image, the user will be sent to the Movie Details page fo
 - Reproducibility: Deterministic seeds, config-driven runs, experiment tracking.
 - Scalability: Sparse matrices, incremental retraining, cached embeddings.
 
-# netflix-recommender/
- app/
-    api.py              # FastAPI app (recommendations, health)
-    service.py          # Model loading, request handling
- configs/
-     als.yaml            # Collaborative filtering config
-     knn.yaml            # Item-based kNN config
-     hybrid.yaml         # Two-stage ranker config
- data/
-     raw/                # Input datasets (ratings, metadata)
-     processed/          # Cleaned splits + features
- models/
-      checkpoints/        # Saved model artifacts
-     registry.json       # Active model pointer
-notebooks/             # EDA, experiments (optional)
-scripts/
-     prepare_data.py     # Clean, split, feature build
-     train.py            # Train selected model
-     evaluate.py         # Offline metrics
-     recommend.py        # CLI recommendations
- tests/                 # Unit tests
- requirements.txt
- README.md
- LICENSE
- 
+# Movie Detail Page
+Here are the complete details of the user selected title like Genre, Movie Summary, Languages in which movie is available, IMDb scores, Directors, Writers and Actors and so on. User will also find a link at the end of the page for the NEtflix Page of the corresponding title.
+<img width="1237" height="909" alt="Screenshot 2026-01-17 180611" src="https://github.com/user-attachments/assets/8807c5f5-7b2d-49c0-a7dc-900eac95a089" />
+
 # Data
 - Ratings: user_id, item_id, rating, timestamp
 - Metadata: item_id, title, genres, description, year
