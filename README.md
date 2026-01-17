@@ -1,6 +1,12 @@
 # Netflix-Recommendation-System
 Netflix’s recommendation system is a personalized algorithm that predicts what you’re most likely to enjoy, based on your viewing behavior, preferences, and similarities with other users. 
 
+# This web-app contains 3 main pages:
+Home Page
+Recommendation Page
+Movie Detail Page
+Netflix Page
+
 # Home Page
 Here the user can choose list of their favourite movies and series and their preferred language. For example, I have entered a list with 2 Horror Movies(Insidious and Insidious Chapter 2), an action series(Supergirl) and a drama series(Suits) as my list of choices and English and Hindi as my preferred languages. Clicking on the Get Started button the user will see the list of recommendations.
 
